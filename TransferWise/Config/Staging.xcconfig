@@ -1,0 +1,26 @@
+//
+//  Staging.xcconfig
+//  TransferWise
+//
+//  Created by Nam Nguyen on 5/11/18.
+//  Copyright © 2018 Nam Nguyen. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Staging.xcconfig
+
+#include "Pods/Target Support Files/Pods-TransferWise/Pods-TransferWise.debug (staging).xcconfig"
+#include "Pods/Target Support Files/Pods-TransferWise/Pods-TransferWise.release (staging).xcconfig"
+
+// Server URL
+// ROOT_URL = http:/$()/staging.localhost:3000
+ROOT_URL = "http:/$()/jsonplaceholder.typicode.com"
+
+// Keys
+API_KEY = 783u9djd8a_hkzos7jd803001nd
+
+// App Settings
+APP_NAME = TransferWise (Staging)
+APP_BUNDLE_ID = com.namnguyen.TransferWise.staging

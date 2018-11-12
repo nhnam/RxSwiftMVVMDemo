@@ -1,0 +1,27 @@
+//
+//  Development.xcconfig
+//  TransferWise
+//
+//  Created by Nam Nguyen on 5/11/18.
+//  Copyright © 2018 Nam Nguyen. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Development.xcconfig
+
+#include "Pods/Target Support Files/Pods-TransferWise/Pods-TransferWise.debug (development).xcconfig"
+#include "Pods/Target Support Files/Pods-TransferWise/Pods-TransferWise.release (development).xcconfig"
+
+// Server URL
+// ROOT_URL = http:/$()/development.localhost:3000
+ROOT_URL = http:/$()/jsonplaceholder.typicode.com
+
+
+// Keys
+API_KEY = 783u9djd8a_hkzos7jd803001nd
+
+// App Settings
+APP_NAME = TransferWise (Development)
+APP_BUNDLE_ID = com.namnguyen.TransferWise.dev
