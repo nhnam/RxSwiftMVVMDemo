@@ -37,8 +37,8 @@ public class DefaultRouter: IsRouter {
     public func navigate(_ navigation: Navigation, from: UIViewController) {
         if let toVC = appNavigation?.viewcontrollerForNavigation(navigation: navigation) {
             appNavigation?.navigate(navigation, from: from, to: toVC)
-            for b in didNavigateBlocks {
-                b(navigation)
+            for listeningBlock in didNavigateBlocks {
+                listeningBlock(navigation)
             }
         }
     }

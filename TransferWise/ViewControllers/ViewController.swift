@@ -36,14 +36,18 @@ final class ViewController: UIViewController, PostPresenterDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "PostItemCell", bundle: nil), forCellReuseIdentifier: "cellPostItemID")
-        self.tableView.estimatedRowHeight = 100
-        self.tableView.separatorStyle = .none
-        self.fetchPosts()
+        configurateTableView()
+        fetchPosts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    private func configurateTableView() {
+        tableView.register(UINib(nibName: "PostItemCell", bundle: nil), forCellReuseIdentifier: "cellPostItemID")
+        tableView.estimatedRowHeight = 100
+        tableView.separatorStyle = .none
     }
     
     private func configurateLoadingView() {
@@ -67,8 +71,8 @@ final class ViewController: UIViewController, PostPresenterDelegate {
     }
     
     private func fetchPosts() {
-        self.state = .isLoading
-        self.presenter.fetchAllPosts(offlineFirst: true)
+        state = .isLoading
+        presenter.fetchAllPosts(offlineFirst: true)
     }
     
     // PostPresenterDelegate
@@ -96,7 +100,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let post = self.presenter.postAt(index: indexPath.row) else { return }
+        guard let post = presenter.postAt(index: indexPath.row) else { return }
         navigate(PostNavigation.postDetail(post))
     }
 }
@@ -104,12 +108,12 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.presenter.numberOfPosts
+        return presenter.numberOfPosts
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: PostItemCell = tableView.dequeueReusableCell(withIdentifier: "cellPostItemID", for: indexPath) as! PostItemCell
-        cell.layout(with: self.presenter.postAt(index: indexPath.row))
+        cell.layout(with: presenter.postAt(index: indexPath.row))
         return cell
     }
 }

@@ -23,5 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        print("Before: \(UserDefaults.standard.dictionaryRepresentation().keys)")
+    
+        if let appDomain = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: appDomain)
+        }
+        print("After: \(UserDefaults.standard.dictionaryRepresentation())")
+    }
+    
 }
 
