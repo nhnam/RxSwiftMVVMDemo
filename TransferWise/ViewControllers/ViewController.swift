@@ -37,11 +37,14 @@ final class ViewController: UIViewController, PostPresenterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurateTableView()
-        fetchPosts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewWillAppearOnce() {
+        fetchPosts()
     }
     
     private func configurateTableView() {

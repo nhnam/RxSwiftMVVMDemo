@@ -19,6 +19,5 @@ final class GoogleAnalytics {
             Analytics.logEvent("Page", parameters:["Page_name": "Post Detail"])
             break
         }
-        print("Track: \(navigation)")
     }
 }

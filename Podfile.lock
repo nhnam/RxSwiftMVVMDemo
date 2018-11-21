@@ -69,14 +69,20 @@ PODS:
   - nanopb/encode (0.3.901)
   - Nimble (7.3.1)
   - Quick (1.3.2)
-  - ReachabilitySwift (4.2.1)
   - Realm (3.10.0):
     - Realm/Headers (= 3.10.0)
   - Realm/Headers (3.10.0)
   - RealmSwift (3.10.0):
     - Realm (= 3.10.0)
   - Result (3.2.4)
+  - RxAtomic (4.4.0)
+  - RxBlocking (4.4.0):
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
+  - RxTest (4.4.0):
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.0)
 
 DEPENDENCIES:
   - Firebase
@@ -84,9 +90,10 @@ DEPENDENCIES:
   - Moya/RxSwift
   - Nimble
   - Quick
-  - ReachabilitySwift
   - RealmSwift
+  - RxBlocking
   - RxSwift
+  - RxTest
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -103,11 +110,13 @@ SPEC REPOS:
     - nanopb
     - Nimble
     - Quick
-    - ReachabilitySwift
     - Realm
     - RealmSwift
     - Result
+    - RxAtomic
+    - RxBlocking
     - RxSwift
+    - RxTest
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -123,12 +132,14 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
-  ReachabilitySwift: 35720ffea59c1c76d15f885be77fd33e33985427
   Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
   RealmSwift: 69121c8b86d0ae005fb779efdb10e606732e1c74
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
 
-PODFILE CHECKSUM: f1ea4f5799fcb20c22e33c3982dc68182b3d4735
+PODFILE CHECKSUM: 83e01c84d35121c69407d23cb98acfc3350f54e5
 
 COCOAPODS: 1.5.3

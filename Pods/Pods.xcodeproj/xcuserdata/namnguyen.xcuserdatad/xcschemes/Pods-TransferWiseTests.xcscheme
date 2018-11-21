@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC2EC2FFB222EA6225457C567992FFD5"
+               BlueprintIdentifier = "3D10ECE95998637A9ADCC0A95304ADE2"
                BuildableName = "Pods_TransferWiseTests.framework"
                BlueprintName = "Pods-TransferWiseTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FC2EC2FFB222EA6225457C567992FFD5"
+            BlueprintIdentifier = "3D10ECE95998637A9ADCC0A95304ADE2"
             BuildableName = "Pods_TransferWiseTests.framework"
             BlueprintName = "Pods-TransferWiseTests"
             ReferencedContainer = "container:Pods.xcodeproj">

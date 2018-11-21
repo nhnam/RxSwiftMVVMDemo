@@ -9,10 +9,6 @@
 import Foundation
 import RxSwift
 
-struct Reachability {
-    static var isNetworkAvailable: Bool = true
-}
-
 enum FetchResult<U> {
     case success(U)
     case failure(Swift.Error)
@@ -51,7 +47,7 @@ public class PostPresenter {
     }
     
     func fetchAllPosts(offlineFirst: Bool) {
-        let fetch = (offlineFirst || !Reachability.isNetworkAvailable) ? self.fetchOffline : self.fetchOnline
+        let fetch = (offlineFirst || !ConnectivityObserver().isConnected) ? self.fetchOffline : self.fetchOnline
         fetch()
     }
     

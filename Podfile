@@ -9,7 +9,6 @@ target 'TransferWise' do
   pod 'RxSwift'
   pod 'RealmSwift'
   pod 'Moya-ModelMapper/RxSwift'
-  pod 'ReachabilitySwift'
   
   pod 'Firebase'
   

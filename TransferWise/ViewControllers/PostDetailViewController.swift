@@ -17,4 +17,12 @@ public class PostViewModel {
 
 final class PostDetailViewController: UIViewController {
     var viewModel: PostViewModel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillAppearOnce() {
+
+    }
 }
