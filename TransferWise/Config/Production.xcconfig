@@ -24,3 +24,5 @@ API_KEY = 783u9djd8a_hkzos7jd803001nd
 // App Settings
 APP_NAME = TransferWise
 APP_BUNDLE_ID = com.namnguyen.TransferWise
+
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = $(inherited)

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,7 +27,6 @@
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="WdQ-ZA-lAJ"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="hyb-7x-0mc"/>
-                                            <outlet property="prefetchDataSource" destination="BYZ-38-t0r" id="B0d-ky-ldv"/>
                                         </connections>
                                     </tableView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="KGv-AC-G1g">
@@ -69,13 +69,37 @@
                     <view key="view" contentMode="scaleToFill" id="CKs-Ei-wFE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cc" translatesAutoresizingMaskIntoConstraints="NO" id="ftE-T7-pyw">
+                                <rect key="frame" x="87.5" y="175.5" width="200" height="200"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1F4-8S-m17" customClass="LoadingIndicatorView" customModule="TransferWise" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="175.5" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="WsC-SK-xua"/>
+                                    <constraint firstAttribute="width" secondItem="1F4-8S-m17" secondAttribute="height" multiplier="1:1" id="uIs-pv-TFE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ftE-T7-pyw" firstAttribute="height" secondItem="1F4-8S-m17" secondAttribute="height" id="2mX-DQ-oCe"/>
+                            <constraint firstItem="1F4-8S-m17" firstAttribute="centerY" secondItem="7hZ-Qp-3xF" secondAttribute="centerY" id="D5c-es-q5Z"/>
+                            <constraint firstItem="ftE-T7-pyw" firstAttribute="width" secondItem="1F4-8S-m17" secondAttribute="width" id="df9-Ql-xxY"/>
+                            <constraint firstItem="ftE-T7-pyw" firstAttribute="centerX" secondItem="1F4-8S-m17" secondAttribute="centerX" id="gYr-d2-3WI"/>
+                            <constraint firstItem="1F4-8S-m17" firstAttribute="centerX" secondItem="7hZ-Qp-3xF" secondAttribute="centerX" id="hLE-Gt-nnI"/>
+                            <constraint firstItem="ftE-T7-pyw" firstAttribute="centerY" secondItem="1F4-8S-m17" secondAttribute="centerY" id="hzc-AX-yzh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7hZ-Qp-3xF"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingIndicatorView" destination="1F4-8S-m17" id="w09-ee-7A7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JP2-GA-jFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1326" y="133"/>
+            <point key="canvasLocation" x="1325.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xe4-CZ-42q">
@@ -96,4 +120,7 @@
             <point key="canvasLocation" x="-164" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cc" width="640" height="640"/>
+    </resources>
 </document>

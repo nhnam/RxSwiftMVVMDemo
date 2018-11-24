@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>method</key>
+	<string>app-store</string>
+	<key>teamID</key>
+	<string>P2T877YLGP</string>
+	<key>uploadBitcode</key>
+	<true/>
+	<key>compileBitcode</key>
+	<true/>
+	<key>uploadSymbols</key>
+	<true/>
+	<key>signingStyle</key>
+	<string>automatically</string>
+	<key>signingCertificate</key>
+	<string>iOS Developer: nam@ring.md (P2T877YLGP)</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.namnguyen.TransferWise.dev</key>
+		<string>TransferWise (Developement)</string>
+	</dict>
+</dict>
+</plist>

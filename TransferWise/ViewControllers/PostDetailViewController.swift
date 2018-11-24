@@ -16,6 +16,9 @@ public class PostViewModel {
 }
 
 final class PostDetailViewController: UIViewController {
+    
+    @IBOutlet weak var loadingIndicatorView: LoadingIndicatorView!
+    
     var viewModel: PostViewModel!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,6 +26,13 @@ final class PostDetailViewController: UIViewController {
     }
     
     override func viewWillAppearOnce() {
-
+        loadingIndicatorView.spin()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.loadingIndicatorView.stop()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }

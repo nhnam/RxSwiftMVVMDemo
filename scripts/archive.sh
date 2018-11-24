@@ -1,0 +1,1 @@
+xcodebuild -workspace ../TransferWise.xcworkspace -scheme 'TransferWise (Developement)' clean archive -configuration debug -sdk iphoneos -archivePath TransferWise-Developement.xcarchive | xcpretty
