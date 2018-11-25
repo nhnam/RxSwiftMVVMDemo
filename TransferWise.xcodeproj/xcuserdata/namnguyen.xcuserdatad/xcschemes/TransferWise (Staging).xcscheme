@@ -38,6 +38,16 @@
                ReferencedContainer = "container:TransferWise.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D8F4646221AA879200667AAC"
+               BuildableName = "TransferWiseUITests.xctest"
+               BlueprintName = "TransferWiseUITests"
+               ReferencedContainer = "container:TransferWise.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

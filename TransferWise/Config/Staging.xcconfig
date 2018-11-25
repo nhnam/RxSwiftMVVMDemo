@@ -26,3 +26,6 @@ APP_NAME = TransferWise (Staging)
 APP_BUNDLE_ID = com.namnguyen.TransferWise.staging
 
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = $(inherited)
+
+TEST_TARGET_NAME = TransferWise (Staging)
+USES_XCTRUNNER = YES

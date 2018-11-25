@@ -27,3 +27,6 @@ APP_NAME = TransferWise (Development)
 APP_BUNDLE_ID = com.namnguyen.TransferWise.dev
 
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = $(inherited)
+
+TEST_TARGET_NAME = TransferWise (Developement)
+USES_XCTRUNNER = YES
